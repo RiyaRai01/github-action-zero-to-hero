@@ -1,10 +1,13 @@
 name: Hello workflow
+
 on:
   push:
-    branches:
-      - Main
+    branches: [main]
+    
 jobs:
+
   greet:
+  
     runs-on: ubuntu-latest
     steps:
       - name: say hello to users
