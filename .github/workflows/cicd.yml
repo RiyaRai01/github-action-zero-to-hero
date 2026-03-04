@@ -1,0 +1,29 @@
+name: Hello workflow
+
+on:
+  workflow_dispatch: 
+    
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        run: echo "Code clone on github"
+        
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build cdocker container
+        run: echo "Docker container build"
+    
+  test:
+      runs-on: ubuntu-latest
+      steps:
+       - name: test code
+         run: echo "Testing in container."
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy code
+        run: echo "Code Deployed"
+        
