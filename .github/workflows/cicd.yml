@@ -1,4 +1,4 @@
-name: Hello workflow
+name: cicd workflow
 
 on:
   workflow_dispatch: 
