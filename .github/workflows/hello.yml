@@ -1,13 +1,7 @@
 name: Hello workflow
 
 on:
-  push:
-    branches: [main]
-
-    paths:
-      -'**.html'
-      -'**.yml'
-      -'**.md'
+  workflow_dispatch: 
     
 jobs:
 
