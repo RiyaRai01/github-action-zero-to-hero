@@ -2,7 +2,7 @@ name: portfoli workflow
 
 on:
     push:
-        branches: [main]
+        branches: [Main]
 
 permissions:
     pages: write   
