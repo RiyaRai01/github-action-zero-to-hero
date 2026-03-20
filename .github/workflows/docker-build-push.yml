@@ -21,6 +21,5 @@ jobs:
               uses: docker/build-push-action@v6
               with:
                 push: true
-                tags: ${{ vars.DOCKERHUB_USER}}/${{vars.GITHUB_REPO}}:${{github.GITHUB_HEAD_REF}}
+                tags: ${{ vars.DOCKERHUB_USER}}/${{vars.GITHUB_REPO}}:${{github.ref}}
 
-                
