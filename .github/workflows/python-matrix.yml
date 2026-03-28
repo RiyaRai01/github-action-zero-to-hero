@@ -1,8 +1,9 @@
 name: Python lint
 
 on:
-    push:
-        branches: [Main]
+    # push:
+    #     branches: [Main]
+    workflow_dispatch:    
 jobs: 
     validate:
         runs-on: ubuntu-latest
