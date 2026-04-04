@@ -4,6 +4,7 @@ on:
     workflow_dispatch:
 
 jobs:
+    # CI
     code-quality:
         uses: ./.github/workflows/code-qualitycheck.yml
     secret-scanner:
@@ -13,3 +14,9 @@ jobs:
     docker-scan:
         uses: ./.github/workflows/docker-lint.yml        
     
+    build:
+        # CD - Docker Build and Push
+        needs: [code-quality, secret-scanner, dependency-scan, docker-scan]
+        uses: ./.github/workflows/docker-build-push.yml
+        secrets: inherit
+        
