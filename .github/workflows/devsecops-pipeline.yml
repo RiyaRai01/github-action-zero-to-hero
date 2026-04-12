@@ -1,7 +1,9 @@
 name: Devsecops End to End Pipeline
 
 on:
-    workflow_dispatch:
+    push:
+        branches: 
+            - Main
 
 jobs:
     # CI
