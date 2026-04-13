@@ -3,8 +3,11 @@ name: Deploy to Server
 on:
    workflow_call:
 jobs:
-    deploy:
+    deploy: 
         runs-on: ubuntu-latest
+        env:
+            DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER}}
+            DOCKER_TAG: ${{github.sha}}
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
